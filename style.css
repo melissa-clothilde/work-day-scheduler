@@ -1,0 +1,57 @@
+body {
+    font-family: 'Rufina', serif;
+    font-size: 18px;
+}
+
+header {
+    border-bottom: solid 8px rgb(175, 151, 175);
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 65px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#current-day {
+    margin-bottom: 50px;
+}
+
+.left {
+    border-right: solid 1px rgb(175, 151, 175);
+    border-top: solid #e9ecef 1px;
+    border-bottom: solid #e9ecef 1px;
+    height: 67px;
+    padding: 19px;
+
+}
+
+.btn {
+    float: left;
+    display: block;
+    padding: 20px;
+    background: #e9ecef;
+    
+}
+
+.table {
+    float: left;
+}
+
+.form-control {
+    min-height: 67px;
+}
+
+img {
+    clear: both;
+}
+
+.left {
+    width: 90px;
+    text-align: right;
+}

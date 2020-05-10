@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Work Day Scheduler</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="text-center">
+        <h1>Work Day Scheduler</h1>
+        <p>A simple calendar app for scheduling your work day</p>
+        <div id="current-day"></div>
+    </header>
+
+    <br>
+
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">9AM</p>
+        </div>
+        <textarea id="block0" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">10AM</p>
+        </div>
+        <textarea id="block1" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">11AM
+        </div>
+        <textarea id="block2" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">12PM
+        </div>
+        <textarea id="block3" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left"> 1PM
+        </div>
+        <textarea id="block4" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">2PM
+        </div>
+        <textarea id="block5" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">3PM
+        </div>
+        <textarea id="block6" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">4PM
+        </div>
+        <textarea id="block7" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+    <div class="input-group mb-3 row">
+        <div>
+            <p class="left">5PM
+        </div>
+        <textarea id="block8" btype="text" class="form-control entry"
+            placeholder="Enter Activity" aria-label="Recipient's username"
+            aria-describedby="basic-addon2"></textarea>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary save-button"
+                type="button"><img src="lock-icon.png" alt="Save" /></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
