@@ -47,13 +47,26 @@ saveBtn.on("click", function () {
 var tasksArray = [];
 
 //when user refreshes the page, the saved events persist
-//an attempt...
-$(document).ready(function listTasks () {
-        var taskArray = localStorage.getItem(JSON.parse('tasks'));
-        if (!task) {
-            taskArray = [];
+//ANOTHER attempt...
+$(document).ready(function listTasks() {
+    var taskArray = localStorage.getItem(JSON.parse('tasks'));
+    if (!task) {
+        taskArray = [];
+    }
+    //loop through the values in local storage and display them on the page
+    tasksArray.each(function (index) {
+        var block = localStorage.getItem(index);
+        if (block + index === $('#block' + index)) {
+            $('#block' + index).val(block);
         }
-        $.each(taskArray, function (value) {
-            timeBlock.append(value);
-        });
-    });
+    })
+
+});
+
+//   //loop through the values in local storage and display them on the page
+//   tasksArray.each(function (index) {
+//     var block = localStorage.getItem(index);
+//     $('#block' + index).val(block);
+// });
+// };
+
