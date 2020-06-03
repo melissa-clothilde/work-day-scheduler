@@ -9,7 +9,7 @@ var time = $('.left');
 var activityText = $('#block1');
 
 //the current day is displayed at the top of the calendar
-dayDiv.text(m.format("dddd" + ", " + "MMM Mo"));
+dayDiv.text(m.format("dddd" + ", " + "MMMM Do"));
 
 
 //each timeblock is color coded to indicate whether it is in the past, present, or future
@@ -38,9 +38,11 @@ saveBtn.each(function (index) {
 
 saveBtn.on("click", function () {
     var textboxId = $(this).attr('data-textboxId');
+    console.log(textboxId);
+    var id = $(block0).attr('id');
     var textInput = $(textboxId);
     textInput.val();
-    tasksArray.push(textInput.val());
+    tasksArray.push({ id: textboxId, item: textInput.val() });
     localStorage.setItem('tasks', JSON.stringify(tasksArray));
 });
 
@@ -49,24 +51,15 @@ var tasksArray = [];
 //when user refreshes the page, the saved events persist
 //ANOTHER attempt...
 $(document).ready(function listTasks() {
-    var taskArray = localStorage.getItem(JSON.parse('tasks'));
-    if (!task) {
-        taskArray = [];
+    var tasksArray = JSON.parse(localStorage.getItem('tasks'));
+    console.log(tasksArray);
+    if (!tasksArray) {
+        tasksArray = [];
     }
-    //loop through the values in local storage and display them on the page
-    tasksArray.each(function (index) {
-        var block = localStorage.getItem(index);
-        if (block + index === $('#block' + index)) {
-            $('#block' + index).val(block);
-        }
-    })
-
+  
+    for (let index = 0; index < tasksArray.length; index++) {
+        var block = tasksArray[index].id;
+        $(block).text(tasksArray[index].item);
+    }
 });
-
-//   //loop through the values in local storage and display them on the page
-//   tasksArray.each(function (index) {
-//     var block = localStorage.getItem(index);
-//     $('#block' + index).val(block);
-// });
-// };
 
